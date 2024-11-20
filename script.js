@@ -14,6 +14,10 @@ gridButton.addEventListener('click', resizeGrid);
 // Creates grid with size of prompt x prompt 
 function resizeGrid() {
   const sideSize = prompt('Squares per side:');
+  if (sideSize > 100) {
+    alert('Max value is 100');
+    return 1;
+  }
   const gridSize = sideSize * sideSize;
   container.innerHTML = '';
   for (let i = 0; i < gridSize; i++) {
