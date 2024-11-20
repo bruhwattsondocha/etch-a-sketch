@@ -16,13 +16,13 @@ html {
 body {
   background-color: grey;
 }
-div {
+div.block {
   background-color: white;
   height: 60px;
   width: 60px;
 }
 
-div:hover {
+div.block:hover {
   background-color: black;
 }
 
