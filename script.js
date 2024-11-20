@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
 const gridButton = document.querySelector('#gridButton');
+const CONTAINER_DIMENSION = 960;
 
 // Create 16x16 grid
 for (let i = 0; i < 256; i ++) {
@@ -18,8 +19,8 @@ function resizeGrid() {
   for (let i = 0; i < gridSize; i++) {
     const div = document.createElement('div');
     div.classList.add('block');
-    div.style.height = `${960 / sideSize}px`;
-    div.style.width = `${960 / sideSize}px`;
+    div.style.height = `${CONTAINER_DIMENSION / sideSize}px`;
+    div.style.width = `${CONTAINER_DIMENSION / sideSize}px`;
     container.appendChild(div);
   }
 }
