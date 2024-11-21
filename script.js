@@ -2,13 +2,15 @@ const container = document.querySelector('.container');
 const gridButton = document.querySelector('#gridButton');
 const CONTAINER_DIMENSION = 960;
 
+
+
 // Create 16x16 grid
 for (let i = 0; i < 256; i ++) {
   const div = document.createElement('div');
   div.classList.add('block');
   container.appendChild(div);
 }
-
+startPaint();
 gridButton.addEventListener('click', resizeGrid);
 
 // Creates grid with size of prompt x prompt 
@@ -27,4 +29,14 @@ function resizeGrid() {
     div.style.width = `${CONTAINER_DIMENSION / sideSize}px`;
     container.appendChild(div);
   }
+  startPaint();
+}
+
+
+function startPaint() {
+  const blockHover = document.querySelectorAll('.block');
+  blockHover.forEach((block) => {
+  block.addEventListener('mouseenter', (e) => {
+    e.target.style.backgroundColor = 'black';
+  })});
 }

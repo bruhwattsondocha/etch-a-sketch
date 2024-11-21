@@ -23,7 +23,7 @@ div.block {
 }
 
 div.block:hover {
-  background-color: black;
+  /* background-color: black; */
 }
 
 .container {
